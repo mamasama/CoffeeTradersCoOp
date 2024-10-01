@@ -1,0 +1,33 @@
+<!-- tell the page to "use" the base template -->
+{% extends "base.html" %}
+{% load static %}
+
+{% comment %}
+	This is a "DTL - Django Template Language comment" 
+	It is defined by comment and end comment blocks.
+	
+	{% this is used to tell Django to do something %}
+	{{ this is used to tell Django to show (render) something.}}
+		
+	Key value pairs are sent from the "render"function
+	and become available to the page.
+{% endcomment %}
+
+{# For Single line comments, you can use this. #}
+
+
+
+{% block content %}
+<div class="container text-center">
+    <h1>Welcome to Coffee Traders Cooperative</h1>
+    <p>Today is {{ today }}. The current time is {{ time }}.</p>
+
+    <p>Your one-stop solution for both merchants and customers alike. Discover, buy, and sell some of the finest ethically- sourced coffee beans, and learn about our diverse collection. Explore or manage your own products with ease.</p>
+
+    <!-- Buttons to navigate to different sections -->
+    <div class="mt-4">
+        <a href="{% url 'product-list' %}" class="btn btn-primary btn-lg">View All Products</a>
+        <a href="{% url 'admin:index' %}" class="btn btn-secondary btn-lg">Admin Dashboard</a>
+    </div>
+</div>
+{% endblock %}

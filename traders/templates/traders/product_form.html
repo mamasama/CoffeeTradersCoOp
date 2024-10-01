@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data">  <!-- This line is essential for file uploads -->
+    {% csrf_token %}
+
+    {{ form.as_p }}  <!-- This renders the form fields with paragraph tags -->
+
+    <div class="navbar">
+        <div></div>
+        <div>
+            <button type="submit" class="btn btn-light mt-3">
+                <i class="fa-regular fa-floppy-disk" style="color:darkgreen;"></i>
+                Save
+            </button>
+
+            <a class="btn btn-light mt-3" href="{% url 'product-list' %}">
+                <i class="fa-solid fa-xmark" style="color: darkred;"></i>
+                Cancel 
+            </a>
+        </div>
+    </div>
+
+</form>
+
+{% if form.errors %}
+    <div class="alert alert-danger mt-5">
+        {{ form.errors.name.as_text }}
+    </div>
+{% endif %}
+
+{% endblock %}

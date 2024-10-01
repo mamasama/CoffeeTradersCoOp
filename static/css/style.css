@@ -1,0 +1,72 @@
+/* Apply a warm, earthy background to the entire page with an image */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("{% static 'images/Traders_Coop_Home.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #4B2E1C; /* Warm, earthy brown text color */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Stack elements vertically */
+    height: 100vh; /* Full height for body */
+}
+
+/* Ensure the content area has no solid background color */
+.container {
+    /* Remove background-color to let the background image show */
+    background-color: transparent; 
+    padding: 40px; /* Keep some padding for text */
+    border-radius: 8px;
+    text-align: center; /* Center text for better alignment */
+    flex: 1; /* Take up available space */
+}
+
+/* Header styles */
+h1 {
+    font-size: 2.5rem; /* Increase heading size */
+    font-weight: bold;
+    margin-bottom: 20px; /* Space below heading */
+}
+
+p {
+    font-size: 1.2rem; /* Increase paragraph size */
+    margin-bottom: 20px; /* Space below paragraph */
+}
+
+/* Custom buttons with earthy tones */
+.btn-primary {
+    background-color: #8B4513; /* Saddle brown */
+    border-color: #8B4513;
+    color: #FFF; /* White text */
+    padding: 12px 24px; /* Increased padding for buttons */
+    font-size: 1.1rem; /* Larger font size */
+}
+
+.btn-primary:hover {
+    background-color: #A0522D; /* Lighter brown on hover */
+    border-color: #A0522D;
+}
+
+/* Footer styling */
+footer {
+    background-color: rgba(75, 46, 28, 0.65); /* Dark brown with 65% opacity */
+    color: #F5F5DC; /* Beige text */
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Allows for positioning */
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: rgba(75, 46, 28, 0.9); /* Dark brown background */
+}
+
+.navbar a {
+    color: #F5F5DC; /* Beige for the navigation text */
+}
+
+.navbar a:hover {
+    color: #F0E68C; /* Light warm yellow on hover */
+}

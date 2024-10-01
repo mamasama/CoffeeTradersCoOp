@@ -1,0 +1,39 @@
+	<!-- Top Header -->	
+	<div class="navbar mt-2 py-3 shadow rounded-2">
+		<div class="nav ps-2">
+			<a 	{% if '/' == request.path %}
+				class="mx-2 nav-item shadow-sm btn btn-light" 
+				{% else %}
+				class="mx-2 nav-item shadow-sm btn" 
+				{% endif %}
+				href="{% url 'home' %}"> 
+
+				<i class="fa-solid fa-house-laptop fa-lg"
+					style="color:brown;">
+				</i>
+				<span class="px-2">
+					Home
+				</span>
+			</a>
+			<a 	
+				{% if 'traders' in request.path %}
+				class="mx-2 nav-item shadow-sm btn btn-light" 
+				{% else %}
+				class="mx-2 nav-item shadow-sm btn" 
+				{% endif %}
+
+				href="{% url 'product-list' %}"> 
+				<i class="fa-solid fa-note-sticky fa-lg"
+					style="color: steelblue;"></i>
+				<span class="px-2 pb-2 text-decoration-none">
+					Products
+				</span>
+			</a>
+		</div>
+		<div class="nav pe-4">
+			<h4> 
+				Coffee Traders Co Op
+			</h4>
+			<sup>&trade;</sup>
+		</div>
+	</div>
